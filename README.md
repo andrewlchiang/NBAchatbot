@@ -1,4 +1,4 @@
-﻿# NBAchatbot
+# NBAchatbot
 
 NBAchatbot is a chatbot designed to talk about the 2019 NBA season. Checkout our [paper](final_paper.pdf)!
 
@@ -27,12 +27,10 @@ After first install, `make run` will be sufficient to start the chatbot. Happy c
    * Lbj for lebron james, aquaman for steven adams, or greek freak for Giannis Antetokounmpo.
 
 3. Opinion on each different player changes (player rating macro): Our bot will have different opinions about different players. These are not hardcoded beforehand but pull from the dataset about players and formulates an opinion based on their stats. This also changes in relation to the context the opinion is being sought in.
-
    * Overall opinion vs opinion of how the player will perform in playoffs. 
    * In conversation #1 our bot has a different opinion for Giannis Antetokounmpo vs Jordan McRae.
 
 4. Engagement with users’ emotions even if sentence isn’t caught by ontology (sentiment analyzer): Bot will indicate to the user that we understand the sentiment of their opinion even if the bot isn’t able to respond to their specific comment. 
-
    * In conversation #1 we see the user is neutral about Isaiah Thomas.
 
 5. Variation: No two conversations will ever be identical because of variation of responses based on opinions and players mentioned by user throughout the conversation, and also individual changes in each utterance.
