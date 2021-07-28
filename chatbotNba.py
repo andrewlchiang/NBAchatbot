@@ -11,7 +11,11 @@ from random import randrange
 import nltk
 nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import argparse
+parser = argparse.ArgumentParser()
 
+parser.add_argument("--debug", help="enable debugging", type = bool, default = False)
+args = parser.parse_args()
 
 class State(Enum):
   #states for trade conversation
@@ -1170,7 +1174,5 @@ df.add_system_transition(State.TURNTRADE4ERR, State.TURNTRADE5S, r'[! "Haha, you
 df.add_system_transition(State.TURNTRADE5S, State.TURNTRADE5U, r'[! "I guess that is a possibility. We will not know until playoffs actually start. Do you want to chat about playoffs or another topic?"]')
 df.add_user_transition(State.TURNTRADE5U, State.END, '[$watching={#ONT(agree)}]')
 """
-
 if __name__ == '__main__':
-    # set this flag to true if you would like more verbose debugging
-    df.run(debugging=False)
+    df.run(debugging=args.debug)

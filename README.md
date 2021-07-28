@@ -2,6 +2,10 @@
 
 NBAchatbot is a chatbot designed to talk about the 2019 NBA season. Checkout our [paper](final_paper.pdf)!
 
+## Requirements
+
+Python 3.4+ for the venv module, which comes baked in.
+
 ## Installation
 
 Now with a [Makefile](Makefile)! 
@@ -17,6 +21,13 @@ to get up and running quickly. `make all` is comprised of `make install`(install
 After first install, `make run` will be sufficient to start the chatbot. Happy chatting!
 
 `make clean` will delete the venv.
+
+## Debugging
+
+To enable debugging, manually run `chatbotNba.py` with the `--debug` flag set to `true`
+```bash
+python3 chatbotNba.py --debug true
+```
 
 ## Features
 
